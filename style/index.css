@@ -1,0 +1,362 @@
+/* variables  */
+:root {
+  --blue-color: #1053a2;
+  --red-color: #d12e2e;
+  --secondary-color: #70757b;
+  --odd-color: #e7eef6;
+  --even-color: white;
+  --pending-color: #f4f3b480;
+  --approved-color: #b1eec480;
+  --refused-color: #ffb9b980;
+  --partial-approve-color: #77b2f780;
+  --danger-color: #d70505;
+}
+
+.blue-color {
+  color: var(--blue-color);
+}
+
+.red-color {
+  color: var(--red-color);
+}
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
+.font-bolder-500 {
+  font-weight: 500;
+}
+
+.font-bolder-600 {
+  font-weight: 600;
+}
+
+.font-bolder-700 {
+  font-weight: 700;
+}
+
+.pending {
+  background-color: var(--pending-color);
+}
+
+.approved {
+  background-color: var(--approved-color);
+}
+
+.refused {
+  background-color: var(--refused-color);
+}
+
+.partial-approve {
+  background-color: var(--partial-approve-color);
+}
+
+/* zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz */
+
+body {
+  font-family: "Cairo", sans-serif;
+  margin: 0 24px;
+  background-color: #F1F5F8;
+}
+/* header  */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.img-logo {
+  width: 137px;
+  height: 66px;
+}
+
+.img-logo img {
+  width: 100%;
+}
+.right-side-titles {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+}
+.time {
+  font-size: 28px;
+}
+
+.time-icon {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+/* header responsive  */
+
+@media screen and (max-width: 668px) {
+  .header {
+    flex-direction: column;
+  }
+}
+
+.header-two {
+  display: flex;
+  justify-content: space-between;
+}
+.right-title {
+  /* background-color: red; */
+  display: flex;
+  gap: 5px;
+  color: var(--blue-color);
+  font-weight: 700;
+}
+
+.image-box {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+}
+
+.image-box img {
+  width: 60%;
+}
+
+.left-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  font-weight: 600;
+}
+
+.green-box {
+  width: 32px;
+  height: 32px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.right-content {
+  width: 250px;
+}
+
+.right-content img {
+  width: 100%;
+}
+
+.text-content {
+  color: var(--blue-color);
+  font-size: 32px;
+  padding: 10px 0px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block; /* or flex depending on your layout */
+}
+
+.circle-background {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 15px solid var(--blue-color);
+  border-radius: 50%;
+  z-index: 1;
+  top: 62%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-image {
+  position: relative;
+  z-index: 2;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.doctor-name {
+  color: #d12e2e;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+.circle-background {
+  animation: pulse 2s infinite alternate;
+}
+@keyframes blueToRed {
+  0% {
+    border-color: var(--blue-color);
+    border-top-color: #d12e2e;
+  }
+  5% {
+    border-top-color: #d12e2e;
+  }
+  10% {
+    border-top-color: #d12e2e;
+    border-right-color: #d12e2e;
+  }
+  20% {
+    border-top-color: #d12e2e;
+    border-right-color: #d12e2e;
+  }
+  30% {
+    border-top-color: #d12e2e;
+    border-right-color: #d12e2e;
+    border-bottom-color: #d12e2e;
+  }
+  40% {
+    border-top-color: #d12e2e;
+    border-right-color: #d12e2e;
+    border-bottom-color: #d12e2e;
+  }
+  50% {
+    border-top-color: #d12e2e;
+    border-right-color: #d12e2e;
+    border-bottom-color: #d12e2e;
+    border-left-color: #d12e2e;
+  }
+  60% {
+    border-color: #d12e2e;
+  }
+  70% {
+    border-color: #d12e2e;
+  }
+  80% {
+    border-color: #d12e2e;
+  }
+  90% {
+    border-color: #d12e2e;
+  }
+  100% {
+    border-color: #d12e2e;
+  }
+}
+
+@keyframes redToBlue {
+  0% {
+    border-color: #d12e2e;
+    border-top-color: var(--blue-color);
+  }
+  5% {
+    border-top-color: var(--blue-color);
+  }
+  10% {
+    border-top-color: var(--blue-color);
+    border-right-color: var(--blue-color);
+  }
+  20% {
+    border-top-color: var(--blue-color);
+    border-right-color: var(--blue-color);
+  }
+  30% {
+    border-top-color: var(--blue-color);
+    border-right-color: var(--blue-color);
+    border-bottom-color: var(--blue-color);
+  }
+  40% {
+    border-top-color: var(--blue-color);
+    border-right-color: var(--blue-color);
+    border-bottom-color: var(--blue-color);
+  }
+  50% {
+    border-top-color: var(--blue-color);
+    border-right-color: var(--blue-color);
+    border-bottom-color: var(--blue-color);
+    border-left-color: var(--blue-color);
+  }
+  60% {
+    border-color: var(--blue-color);
+  }
+  70% {
+    border-color: var(--blue-color);
+  }
+  80% {
+    border-color: var(--blue-color);
+  }
+  90% {
+    border-color: var(--blue-color);
+  }
+  100% {
+    border-color: var(--blue-color);
+  }
+}
+
+.circle-background {
+  animation: blueToRed 6s ease-in-out forwards,
+    redToBlue 6s ease-in-out 6s forwards;
+  animation-iteration-count: infinite;
+}
+
+.footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+.footer-content {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background-color: white;
+}
+
+.footer-text {
+  color: var(--blue-color);
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.footer-image {
+  width: 48px;
+  height: 48px;
+  animation: colorPulse 3s ease-in-out infinite;
+}
+
+.footer-image img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+}
+
+@keyframes colorPulse {
+  0%,
+  100% {
+    color: var(--blue-color);
+    transform: scale(1);
+  }
+  25% {
+    filter: drop-shadow(0 0 8px var(--blue-color));
+  }
+  50% {
+    color: #d12e2e;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 12px #d12e2e);
+  }
+  75% {
+    filter: drop-shadow(0 0 8px #d12e2e);
+  }
+}
