@@ -104,6 +104,9 @@ body {
   .header {
     flex-direction: column;
   }
+  .right-content {
+  margin-right: 0% !important;
+}
 }
 
 .header-two {
@@ -144,17 +147,24 @@ body {
 }
 
 .content {
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 5px;
-  margin: -12px 0px;
+  margin: -12px 0px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: -30px 0px;
 }
 
 .right-content {
   /* width: 250px; */
   text-align: center;
+  margin-right: -7%;
 }
 /* 
 .right-content img {
@@ -320,7 +330,7 @@ body {
 }
 
 .footer {
-  margin-top: 12px;
+  margin-top: 52px;
   display: flex;
   justify-content: center;
 }
